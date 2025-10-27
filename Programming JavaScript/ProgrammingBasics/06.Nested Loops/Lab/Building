@@ -1,0 +1,17 @@
+function execute(floors, roomsPerFloor) {
+    for (let floor = floors; floor >= 1; floor--) {
+        let output = ''
+        for (let room = 0; room < roomsPerFloor; room++) {
+            if (floor === floors) {
+                output += `L${floor}${room} `
+            } else if (floor % 2 === 0) {
+                output += `O${floor}${room} `
+            } else {
+                output += `A${floor}${room} `
+            }
+        }
+        console.log(output);
+    }
+}
+
+execute(9, 5)
