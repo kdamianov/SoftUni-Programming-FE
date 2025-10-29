@@ -1,29 +1,24 @@
-/* 01. Agency Profit
+/* 01.Agency Profit */
 function execute(companyName, adultTickets, childrenTickets, adultTicketNetPrice, serviceTax) {
     let childrenTicketNetPrice = adultTicketNetPrice * 0.3 + serviceTax
     adultTicketNetPrice += serviceTax
 
     let ttlTicketsPrice = (adultTickets * adultTicketNetPrice) + (childrenTickets * childrenTicketNetPrice)
     let profit = ttlTicketsPrice * 0.2
-    
+
     console.log(`The profit of your agency from ${companyName} tickets is ${profit.toFixed(2)} lv.`);
 }
 
-execute('Ryanair',
-    60,
-    23,
-    158.96,
-    39.12
-)
+execute('Ryanair', 60, 23, 158.96, 39.12)
 
-02. Add Bags
+/* 02.Add Bags */
 function execute(lugaggePrice, kilograms, daysToTrip, luggageCount) {
     if (kilograms < 10) {
         lugaggePrice = lugaggePrice * 0.2
     } else if (kilograms <= 20) {
         lugaggePrice = lugaggePrice * 0.5
     }
-    
+
     if (daysToTrip > 30) {
         lugaggePrice += lugaggePrice * 0.1
     } else if (daysToTrip >= 7) {
@@ -35,17 +30,13 @@ function execute(lugaggePrice, kilograms, daysToTrip, luggageCount) {
     let ttlPriceBags = lugaggePrice * luggageCount
 
     console.log(`The total price of bags is: ${ttlPriceBags.toFixed(2)} lv.`);
-    
-    
+
+
 }
 
-execute(30,
-    18,
-    15,
-    2,
-)
+execute(30, 18, 15, 2)
 
-03. Aluminum Joinery
+/* 03.Aluminum Joinery */
 function execute(count, type, delivery) {
     let price = 0
     if (count < 10) {
@@ -100,12 +91,9 @@ function execute(count, type, delivery) {
 
 }
 
-execute(105,
-    '100X150',
-    'With delivery'
-)
+execute(105, '100X150', 'With delivery')
 
-04. Balls
+/* 04.Balls */
 function execute(input) {
     let ballsCount = input[0]
     let ttlPoints = 0
@@ -152,16 +140,11 @@ function execute(input) {
     console.log(`Divides from black balls: ${blackBallsCount}`);
 }
 
-execute(["5",
-"red",
-"red",
-"ddd",
-"ddd",
-"ddd"])
+execute(["5", "red", "red", "ddd", "ddd", "ddd"])
 
 
 
-05. Best Player
+/* 05.Best Player */
 function execute(input) {
     let index = 0
     let command = input[index]
@@ -192,14 +175,8 @@ function execute(input) {
     }
 }
 
-execute(["Petrov",
-    "2",
-    "Drogba",
-    "11"])
+execute(["Petrov", "2", "Drogba", "11"])
 
-
-
- */
 
 /* 06. Barcode generator */
 function execute(start, end) {
@@ -209,17 +186,13 @@ function execute(start, end) {
     let result = '';
 
     for (let i = Number(startStr[0]); i <= Number(endStr[0]); i++) {
-        if (i % 2 === 0) continue; // пропускаме четните
-
+        if (i % 2 === 0) continue;
         for (let j = Number(startStr[1]); j <= Number(endStr[1]); j++) {
             if (j % 2 === 0) continue;
-
             for (let k = Number(startStr[2]); k <= Number(endStr[2]); k++) {
                 if (k % 2 === 0) continue;
-
                 for (let l = Number(startStr[3]); l <= Number(endStr[3]); l++) {
                     if (l % 2 === 0) continue;
-
                     result += `${i}${j}${k}${l} `;
                 }
             }
@@ -228,6 +201,4 @@ function execute(start, end) {
     console.log(result.trim());
 }
 
-execute(2345,
-6789
-)
+execute(2345, 6789)
