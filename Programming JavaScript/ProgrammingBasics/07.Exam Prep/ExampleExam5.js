@@ -276,9 +276,9 @@ function execute(input) {
         console.log(`Win rate: ${(winRate).toFixed(2)}%`);
     }
 
-} 
+}
 
-execute(["Chelsea", "0"]) 
+execute(["Chelsea", "0"])
 
 /* 06. Name Game */
 function execute(input) {
@@ -346,4 +346,5 @@ function execute(input) {
     console.log(`The most powerful word is ${mostPowerful} - ${maxPower}`);
 }
 
-execute(["The", "Most", "Powerful", "Word", "Is", "Experience", "End of words" ]);
+
+execute([ "The", "Most", "Powerful", "Word", "Is", "Experience", "End of words"]);
