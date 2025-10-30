@@ -79,8 +79,6 @@ function execute(type, sugar, drinksCount) {
 
 execute('Cappuccino', 'Normal', 13)
 
-
-
 /* 03. Travel Agency */
 function execute(city, package, vipCard, stay) {
     let price = 0
@@ -174,8 +172,6 @@ function execute(input) {
 
 execute(["100", "Sidecar", "7", "Mojito", "5", "White Russian", "10"])
 
-
-
 /* 04. Renovation */
 function execute(input) {
     let height = Number(input[0]);
@@ -209,8 +205,6 @@ function execute(input) {
 }
 
 execute(["2", "3", "25", "6", "7", "8"])
-
-
 
 /* 05. PC Game Shop */
 function execute(input) {
@@ -352,13 +346,4 @@ function execute(input) {
     console.log(`The most powerful word is ${mostPowerful} - ${maxPower}`);
 }
 
-
-execute([
-  "The",
-  "Most",
-  "Powerful",
-  "Word",
-  "Is",
-  "Experience",
-  "End of words",
-]);
+execute(["The", "Most", "Powerful", "Word", "Is", "Experience", "End of words" ]);
