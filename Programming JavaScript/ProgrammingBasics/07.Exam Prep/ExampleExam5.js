@@ -1,4 +1,4 @@
-/* 01. Pool Day
+/* 01. Pool Day */
 function execute(peopleCount, entranceFee, sunbedPrice, umbrellaFee) {
     let entranceAmount = peopleCount * entranceFee
     let sunbedAmount = Math.ceil(peopleCount * 0.75) * sunbedPrice
@@ -12,7 +12,7 @@ function execute(peopleCount, entranceFee, sunbedPrice, umbrellaFee) {
 
 execute(21, 5.50, 4.40, 6.20)
 
-02. Family Trip
+/* 02. Family Trip */
 function execute(budget, nights, nightPrice, addExpensePercent) {
     if (nights > 7) {
         nightPrice -= nightPrice * 0.05
@@ -31,7 +31,7 @@ function execute(budget, nights, nightPrice, addExpensePercent) {
 
 execute(500, 7, 66, 15)
 
-03. Coffee Machine
+/* 03. Coffee Machine */
 function execute(type, sugar, drinksCount) {
     let price = 0
     switch (type) {
@@ -81,7 +81,7 @@ execute('Cappuccino', 'Normal', 13)
 
 
 
-03. Travel Agency
+/* 03. Travel Agency */
 function execute(city, package, vipCard, stay) {
     let price = 0
     if (stay < 1) {
@@ -142,7 +142,7 @@ function execute(city, package, vipCard, stay) {
 
 execute('Gabrovo', 'noBreakfast', 'no', 3)
 
-04. Club
+/* 04. Club */
 function execute(input) {
     let expectedProfit = input[0]
     let index = 1
@@ -176,7 +176,7 @@ execute(["100", "Sidecar", "7", "Mojito", "5", "White Russian", "10"])
 
 
 
-04. Renovation
+/* 04. Renovation */
 function execute(input) {
     let height = Number(input[0]);
     let width = Number(input[1]);
@@ -212,7 +212,7 @@ execute(["2", "3", "25", "6", "7", "8"])
 
 
 
-05. PC Game Shop
+/* 05. PC Game Shop */
 function execute(input) {
     let hearthstoneCount = 0
     let forniteCount = 0
@@ -244,10 +244,8 @@ function execute(input) {
 
 execute(["3", "Hearthstone", "Diablo 2", "Star Craft 2"])
 
- */
-
 /* 05. Football Tournament */
-/* function execute(input) {
+function execute(input) {
     let clubName = input[0]
     let gamesPlayed = Number(input[1])
 
@@ -284,12 +282,12 @@ execute(["3", "Hearthstone", "Diablo 2", "Star Craft 2"])
         console.log(`Win rate: ${(winRate).toFixed(2)}%`);
     }
 
-} */
+} 
 
-/* execute(["Chelsea", "0"]) */
+execute(["Chelsea", "0"]) 
 
 /* 06. Name Game */
-/* function execute(input) {
+function execute(input) {
     let index = 0;
     let winnerName = "";
     let winnerPoints = 0;
@@ -319,7 +317,7 @@ execute(["3", "Hearthstone", "Diablo 2", "Star Craft 2"])
 }
 
 
-execute(["Ivan", "73", "20", "98", "110", "Ivo", "80", "65", "87", "Stop"]); */
+execute(["Ivan", "73", "20", "98", "110", "Ivo", "80", "65", "87", "Stop"]);
 
 /* 06. The Most Powerful Word */
 function execute(input) {
