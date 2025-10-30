@@ -3,7 +3,7 @@ function execute(peopleCount, entranceFee, sunbedPrice, umbrellaFee) {
     let entranceAmount = peopleCount * entranceFee
     let sunbedAmount = Math.ceil(peopleCount * 0.75) * sunbedPrice
     let umbrellaAmount = Math.ceil(peopleCount / 2) * umbrellaFee
-    
+
     let ttlAmount = entranceAmount + sunbedAmount + umbrellaAmount
 
     console.log(`${ttlAmount.toFixed(2)} lv.`);
@@ -18,13 +18,13 @@ function execute(budget, nights, nightPrice, addExpensePercent) {
         nightPrice -= nightPrice * 0.05
     }
     let nightsAmount = nights * nightPrice
-    let addExpensesAmount = budget * addExpensePercent/100
+    let addExpensesAmount = budget * addExpensePercent / 100
     let ttlAmount = nightsAmount + addExpensesAmount
     if (ttlAmount <= budget) {
-        console.log(`Ivanovi will be left with ${(budget-ttlAmount).toFixed(2)} leva after vacation.`);
-    } else{
+        console.log(`Ivanovi will be left with ${(budget - ttlAmount).toFixed(2)} leva after vacation.`);
+    } else {
         console.log(`${(ttlAmount - budget).toFixed(2)} leva needed.`);
-        
+
     }
 
 }
@@ -66,15 +66,15 @@ function execute(type, sugar, drinksCount) {
     let ttlAmount = drinksCount * price
     if (sugar === 'Without') {
         ttlAmount -= ttlAmount * 0.35
-    } 
-    if (type === 'Espresso' && drinksCount >=5) {
+    }
+    if (type === 'Espresso' && drinksCount >= 5) {
         ttlAmount -= ttlAmount * 0.25
-    } 
+    }
     if (ttlAmount > 15) {
         ttlAmount -= ttlAmount * 0.20
     }
     console.log(`You bought ${drinksCount} cups of ${type} for ${ttlAmount.toFixed(2)} lv.`);
-    
+
 }
 
 execute('Cappuccino', 'Normal', 13)
@@ -178,41 +178,41 @@ execute(["100", "Sidecar", "7", "Mojito", "5", "White Russian", "10"])
 
 04. Renovation
 function execute(input) {
-  let height = Number(input[0]);
-  let width = Number(input[1]);
-  let percent = Number(input[2]);
-  
-  let totalArea = 4 * height * width;
-  let areaToPaint = Math.ceil(totalArea * (1 - percent / 100));
+    let height = Number(input[0]);
+    let width = Number(input[1]);
+    let percent = Number(input[2]);
 
-  let index = 3;
-  let command = input[index];
+    let totalArea = 4 * height * width;
+    let areaToPaint = Math.ceil(totalArea * (1 - percent / 100));
 
-  while (command !== "Tired!") {
-    let paint = Number(command);
-    areaToPaint -= paint;
+    let index = 3;
+    let command = input[index];
 
-    if (areaToPaint <= 0) {
-      if (areaToPaint < 0) {
-        console.log(`All walls are painted and you have ${Math.abs(areaToPaint)} l paint left!`);
-      } else {
-        console.log("All walls are painted! Great job, Pesho!");
-      }
-      return;
+    while (command !== "Tired!") {
+        let paint = Number(command);
+        areaToPaint -= paint;
+
+        if (areaToPaint <= 0) {
+            if (areaToPaint < 0) {
+                console.log(`All walls are painted and you have ${Math.abs(areaToPaint)} l paint left!`);
+            } else {
+                console.log("All walls are painted! Great job, Pesho!");
+            }
+            return;
+        }
+
+        index++;
+        command = input[index];
     }
 
-    index++;
-    command = input[index];
-  }
-
-  console.log(`${areaToPaint} quadratic m left.`);
+    console.log(`${areaToPaint} quadratic m left.`);
 }
 
 execute(["2", "3", "25", "6", "7", "8"])
 
- */
 
-/* 05. PC Game Shop */
+
+05. PC Game Shop
 function execute(input) {
     let hearthstoneCount = 0
     let forniteCount = 0
@@ -242,8 +242,51 @@ function execute(input) {
     console.log(`Others - ${(othersCount / allGamesCount * 100).toFixed(2)}%`);
 }
 
-execute(["3",
-"Hearthstone",
-"Diablo 2",
-"Star Craft 2"])
+execute(["3", "Hearthstone", "Diablo 2", "Star Craft 2"])
+
+ */
+
+/* 05. Football Tournament */
+function execute(input) {
+    let clubName = input[0]
+    let gamesPlayed = Number(input[1])
+
+
+    let winCount = 0
+    let drawCount = 0
+    let lossCount = 0
+
+    for (let index = 2; index < input.length; index++) {
+        switch (input[index]) {
+            case "W":
+                winCount++
+                break
+            case "D":
+                drawCount++
+                break
+            case "L":
+                lossCount++
+                break
+        }
+    }
+    let ttlPoints = winCount * 3 + drawCount
+    let winRate = winCount / gamesPlayed * 100
+
+    if (gamesPlayed === 0) {
+        console.log(`${clubName} hasn't played any games during this season.`);
+        return
+    } else {
+        console.log(`${clubName} has won ${ttlPoints} points during this season`);
+        console.log("Total stats:");
+        console.log(`## W: ${winCount}`);
+        console.log(`## D: ${drawCount}`);
+        console.log(`## L: ${lossCount}`);
+        console.log(`Win rate: ${(winRate).toFixed(2)}%`);
+    }
+
+}
+
+execute(["Chelsea",
+    "0"])
+
 
