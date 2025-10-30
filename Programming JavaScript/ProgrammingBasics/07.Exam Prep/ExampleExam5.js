@@ -247,7 +247,7 @@ execute(["3", "Hearthstone", "Diablo 2", "Star Craft 2"])
  */
 
 /* 05. Football Tournament */
-function execute(input) {
+/* function execute(input) {
     let clubName = input[0]
     let gamesPlayed = Number(input[1])
 
@@ -284,8 +284,83 @@ function execute(input) {
         console.log(`Win rate: ${(winRate).toFixed(2)}%`);
     }
 
+} */
+
+/* execute(["Chelsea", "0"]) */
+
+/* 06. Name Game */
+/* function execute(input) {
+    let index = 0;
+    let winnerName = "";
+    let winnerPoints = 0;
+
+    while (input[index] !== "Stop") {
+        let name = input[index++];
+        let points = 0;
+
+        for (let i = 0; i < name.length; i++) {
+            let num = Number(input[index++]);
+            let ascii = name.charCodeAt(i);
+
+            if (num === ascii) {
+                points += 10;
+            } else {
+                points += 2;
+            }
+        }
+
+        if (points >= winnerPoints) {
+            winnerName = name;
+            winnerPoints = points;
+        }
+    }
+
+    console.log(`The winner is ${winnerName} with ${winnerPoints} points!`);
 }
 
-execute(["Chelsea", "0"])
+
+execute(["Ivan", "73", "20", "98", "110", "Ivo", "80", "65", "87", "Stop"]); */
+
+/* 06. The Most Powerful Word */
+function execute(input) {
+    let index = 0;
+    let mostPowerful = "";
+    let maxPower = Number.MIN_SAFE_INTEGER;
+
+    while (input[index] !== "End of words") {
+        let word = input[index++];
+        let sum = 0;
+
+        for (let i = 0; i < word.length; i++) {
+            sum += word.charCodeAt(i);
+        }
+
+        let firstLetter = word[0].toLowerCase();
+        let vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+
+        let power = 0;
+        if (vowels.includes(firstLetter)) {
+            power = sum * word.length;
+        } else {
+            power = Math.floor(sum / word.length);
+        }
+
+        if (power > maxPower) {
+            maxPower = power;
+            mostPowerful = word;
+        }
+    }
+
+    console.log(`The most powerful word is ${mostPowerful} - ${maxPower}`);
+}
 
 
+execute([
+  "The",
+  "Most",
+  "Powerful",
+  "Word",
+  "Is",
+  "Experience",
+  "End of words",
+]);
