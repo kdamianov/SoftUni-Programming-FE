@@ -276,7 +276,7 @@ function execute(input) {
         console.log(`${clubName} hasn't played any games during this season.`);
         return
     } else {
-        console.log(`${clubName} has won ${ttlPoints} points during this season`);
+        console.log(`${clubName} has won ${ttlPoints} points during this season.`);
         console.log("Total stats:");
         console.log(`## W: ${winCount}`);
         console.log(`## D: ${drawCount}`);
@@ -286,7 +286,6 @@ function execute(input) {
 
 }
 
-execute(["Chelsea",
-    "0"])
+execute(["Chelsea", "0"])
 
 
